@@ -73,7 +73,8 @@ public class MainActivity<numberOfCoffes> extends AppCompatActivity {
             intent.putExtra(Intent.EXTRA_EMAIL  , "mdshalique472@gmail.com");
             intent.putExtra(Intent.EXTRA_TEXT, priceMessage);
             startActivity(intent);
-        } else if (whipVal) {
+        }
+        else if (whipVal) {
             int price = calculatePrice(numberOfCoffes, 6);
             String priceMessage = "  NAME: " + nameperson;
             priceMessage += "\n  Whipped cream added";
@@ -89,7 +90,8 @@ public class MainActivity<numberOfCoffes> extends AppCompatActivity {
             startActivity(intent);
 
 
-        } else if (chocVal) {
+        }
+        else if (chocVal) {
             int price = calculatePrice(numberOfCoffes, 7);
             String priceMessage = "  NAME: " + nameperson;
             priceMessage = priceMessage + "\n  Chocolate Added";
@@ -104,7 +106,8 @@ public class MainActivity<numberOfCoffes> extends AppCompatActivity {
             intent.putExtra(Intent.EXTRA_SUBJECT, "Just java order for " + nameperson );
             intent.putExtra(Intent.EXTRA_TEXT, priceMessage);
             startActivity(intent);
-        } else {
+        }
+        else {
             int price = calculatePrice(numberOfCoffes, 5);
             String priceMessage = "  NAME: " + nameperson;
             priceMessage = priceMessage + "\n  Quantity =" + numberOfCoffes;
@@ -119,12 +122,6 @@ public class MainActivity<numberOfCoffes> extends AppCompatActivity {
             startActivity(intent);
         }
 
-
-
-
-
-
-
     }
 
     public int calculatePrice(int nOC, int valv) {
@@ -132,9 +129,6 @@ public class MainActivity<numberOfCoffes> extends AppCompatActivity {
         return (price);
     }
 
-    /**
-     * This method displays the given text on the screen.
-     */
     private void displayMessage(String message) {
         TextView price = (TextView) findViewById(R.id.price);
         price.setText(message);
