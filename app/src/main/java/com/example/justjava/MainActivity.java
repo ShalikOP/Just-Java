@@ -42,7 +42,6 @@ public class MainActivity<numberOfCoffes> extends AppCompatActivity {
         display(numberOfCoffes);
     }
 
-
     public void submitOrder(View view) {
 
         CheckBox whipped;
